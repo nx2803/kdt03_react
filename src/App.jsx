@@ -8,16 +8,23 @@ import MyClock from "./02/MyClock";
 import MyDiv1 from "./03/MyDiv1";
 import MyListCard from "./04/MyListCard";
 import MyList from "./04/MyList";
+import MyToggle from "./05/MyToggle";
+import { RiHome3Line } from "react-icons/ri";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Lotto from "./06/Lotto";
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
-    <div className='w-full lg:h-screen flex flex-col bg-gray-800 justify-center items-center py-10 border-dotted border-4 border-white'>
-      {/* <Hello/>
-      <MyClock/> */}
-    {/* <MyDiv1/> */}
-        <MyList/>
-     
+    <div className='w-full h-screen flex flex-col overflow-hidden bg-gray-800 border-3 border-dashed border-white'>
+      <Header/>
+      <main className="container mx-auto flex-1 p-4 overflow-y-auto">
+        <Lotto></Lotto>
+
+      </main>
+      <Footer/>
+
     </div>
   )
 }
