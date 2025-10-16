@@ -27,7 +27,7 @@ const handleClick = () => {
     <div className={` w-full h-60 flex flex-col justify-center items-center text-white font-bold rounded  ${isActive ? boxstyle.on : boxstyle.off}`}>
       <h1 className={`text-3xl ${isActive ? 'text-black' : 'text-white'}`}>ToggleBox</h1>
       
-      <TailButton color={color} caption = {caption} onHandle={handleClick}/>
+      <TailButton color={color} caption = {caption} onClick={handleClick}/>
       <p className={`text-sm ${isActive ? 'text-black' : 'text-white'}`}>현재 상태 : {isActive ? 'on' : 'off'}</p>
     </div>
   )

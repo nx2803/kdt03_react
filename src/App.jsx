@@ -13,6 +13,7 @@ import { RiHome3Line } from "react-icons/ri";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Lotto from "./06/Lotto";
+import FoodMain from "./07/FoodMain";
 function App() {
   // const [count, setCount] = useState(0)
 
@@ -20,7 +21,7 @@ function App() {
     <div className='w-full h-screen flex flex-col overflow-hidden bg-gray-800 border-3 border-dashed border-white'>
       <Header/>
       <main className="container mx-auto flex-1 p-4 overflow-y-auto">
-        <Lotto></Lotto>
+        <FoodMain/>
 
       </main>
       <Footer/>
