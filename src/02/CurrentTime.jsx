@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+
 
 function CurrentTime() {
-    const time = new Date;
+  const [CurrentT, setCurrentT] = useState(new Date());
+
+  useEffect(() => {
+    setInterval(() => {
+      setCurrentT(new Date());
+    }, 1000);
+  });
+  
   return (
-    <div>
-      <p className='text-gray-800 text-4xl m-5 p-3 font-extrabold bg-white rounded-2xl'>현재 시각 : {time.toLocaleTimeString()}</p>
+
+    <div className=' flex justify-center items-center'>
+      <p className='text-gray-800 text-4xl w-200 m-5 p-3 font-extrabold justify-center items-center text-center bg-white rounded-2xl'>현재 시각 : {CurrentT.toLocaleTimeString('ko-KR')}</p>
     </div>
   )
 }
