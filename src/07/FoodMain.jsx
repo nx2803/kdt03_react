@@ -8,7 +8,7 @@ const category = [
   '전체',
   ...new Set(fooddata.map(item => item["운영주체 분류"].replaceAll(' ', '')))
 ];
-console.log(category);
+  
 
 export default function FoodMain() {
 

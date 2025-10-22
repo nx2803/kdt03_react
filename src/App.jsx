@@ -15,6 +15,7 @@ import Footer from "./components/Footer";
 import Lotto from "./06/Lotto";
 import FoodMain from "./07/FoodMain";
 import MyEffect from "./08/MyEffect";
+import BoxOffice from "./09/BoxOffice";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -22,12 +23,12 @@ function App() {
   return (
     <div className='w-full h-screen flex flex-col overflow-hidden bg-neutral-800 '>
       <Header />
-      <div className="w-full h-screen border-8 border-dashed border-red-700 flex justify-center items-center">
+      <div className="w-full h-screen border-y-8 border-double border-red-700 flex justify-center items-center">
         <main className="container mx-auto flex-1 p-4 overflow-x-hidden overflow-y-auto ">
-          {/* <FoodMain/> */}
+        
           {/* <MyEffect/> */}
-          <MyClock />
-
+          {/* <MyClock /> */}
+          <BoxOffice/>
         </main>
       </div>
       <Footer />
