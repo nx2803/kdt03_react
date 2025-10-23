@@ -32,7 +32,7 @@ const BTStyle = {
     },
     red: {
         base: "bg-red-700",
-        hover: "bg-red-700",
+        hover: "bg-red-800",
         text: "text-white"
     }
 }

@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react'
-import TailButton from '../components/tailButton';
+import TailButton from '../components/TailButton';
 
 export default function MyEffect() {
     const [IsActive, setIsActive] = useState(false);

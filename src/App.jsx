@@ -16,19 +16,23 @@ import Lotto from "./06/Lotto";
 import FoodMain from "./07/FoodMain";
 import MyEffect from "./08/MyEffect";
 import BoxOffice from "./09/BoxOffice";
+import Traffic from "./10/Traffic";
+import MyRef from "./11/MyRef";
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
-    <div className='w-full h-screen flex flex-col overflow-hidden bg-neutral-800 '>
+    <div className='w-full flex flex-col overflow-hidden bg-neutral-800 '>
       <Header />
-      <div className="w-full h-screen border-y-8 border-double border-red-700 flex justify-center items-center">
-        <main className="container mx-auto flex-1 p-4 overflow-x-hidden overflow-y-auto ">
+      <div className="w-full  border-y-8 border-double border-red-700 flex justify-center items-center">
+        <main className="container mx-auto flex-1 p-4 overflow-x-hidden text-center text-white overflow-y-auto ">
         
-          {/* <MyEffect/> */}
-          {/* <MyClock /> */}
+          
+          <MyClock />
           <BoxOffice/>
+          <Traffic/>
+        
         </main>
       </div>
       <Footer />

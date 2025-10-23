@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import TailBall from '../components/TailBall'
-import TailButton from '../components/tailButton'
+import TailButton from '../components/TailButton'
 import { FaPlus } from "react-icons/fa";
 import Confetti from 'react-confetti';
 export default function Lotto() {

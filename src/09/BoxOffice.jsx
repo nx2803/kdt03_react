@@ -167,7 +167,7 @@ export default function BoxOffice() {
                                             {parseInt(movie.rankInten) !== 0 ? (
                                                 <p className='ml-1 text-gray-700 font-normal'>{Math.abs(movie.rankInten)}</p>
                                             ) : movie.rankOldAndNew === 'NEW' ? (
-                                                <span className="ml-1 text-purple-600">NEW</span>
+                                                <span className="ml-1 text-yellow-500">NEW</span>
                                             ) : (
                                                 <span className="ml-1 text-gray-500">-</span>
                                             )}

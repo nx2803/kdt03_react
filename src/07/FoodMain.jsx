@@ -2,7 +2,7 @@ import React from 'react'
 import FoodCard from './FoodCard'
 import fooddata from './fooddata.json'
 import { useState } from 'react';
-import TailButton from '../components/tailButton'
+import TailButton from '../components/TailButton'
 
 const category = [
   '전체',
