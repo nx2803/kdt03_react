@@ -28,9 +28,9 @@ export default function MyRef() {
     <div className="w-full h-full 
                     text-xl font-bold
                     flex justify-center items-center
-                    space-x-10">
-      <div className="text-blue-700">
-        <div className="bg-blue-700 text-white p-2 cursor-pointer"
+                    space-x-10 my-10 ">
+      <div className="text-red-700">
+        <div className="bg-red-700 text-white p-2 cursor-pointer rounded"
              onClick={handelCnt}>
           일반 컴포넌트 변수
         </div>
@@ -38,8 +38,8 @@ export default function MyRef() {
           {cnt}
         </div>
       </div>
-      <div className="text-lime-700">
-        <div className="bg-lime-700 text-white p-2 cursor-pointer"
+      <div className="text-gray-500">
+        <div className="bg-gray-500 text-white p-2 cursor-pointer rounded"
               onClick={handelsCnt}>
           state 변수
         </div>
@@ -47,8 +47,8 @@ export default function MyRef() {
           {scnt}
         </div>
       </div>
-      <div className="text-orange-700">
-        <div className="bg-orange-700 text-white p-2  cursor-pointer"
+      <div className="text-white">
+        <div className="bg-white text-black p-2  cursor-pointer rounded"
             onClick={handelrCnt}>
           ref 변수
         </div>

@@ -2,10 +2,22 @@ import React, { useEffect, useState } from 'react'
 import TrafficNav from './TrafficNav'
 import trafficData from './교통사고통계.json'
 import TrafficRes from './TrafficRes';
+const apikey = import.meta.env.VITE_TRA_API;
+
 export default function Traffic() {
     const [tdata, setTdata] = useState([]);
     const getFetchData = () => {
-        setTdata(trafficData);
+            
+        // setTdata(trafficData);
+        const baseurl = "https://api.odcloud.kr/api/15070282/v1/uddi:8449c5d7-8be5-4712-9093-968fc0b2d9fc?page=1&perPage=117&returnType=json&serviceKey="
+        let url = `${baseurl}${apikey}`;
+
+        fetch(url)
+            .then(resp => resp.json())
+            .then(data => {
+                setTdata(data.data);
+            })
+            .catch(err => console.log(err))
     }
 
     useEffect(() => {

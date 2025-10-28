@@ -18,21 +18,26 @@ import MyEffect from "./08/MyEffect";
 import BoxOffice from "./09/BoxOffice";
 import Traffic from "./10/Traffic";
 import MyRef from "./11/MyRef";
+import RefCal from "./12/RefCal";
+import Gallary from "./13/Gallary";
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
-    <div className='w-full flex flex-col overflow-hidden bg-neutral-800 '>
+    <div className='w-full  h-screen flex flex-col overflow-hidden bg-neutral-800 '>
       <Header />
-      <div className="w-full  border-y-8 border-double border-red-700 flex justify-center items-center">
-        <main className="container mx-auto flex-1 p-4 overflow-x-hidden text-center text-white overflow-y-auto ">
-        
-          
-          <MyClock />
+      <div className="w-full h-screen border-y-3  my-1 border-white flex justify-center items-center">
+        <main className="container  mx-auto flex-1 p-4 overflow-x-hidden text-center text-black overflow-y-auto ">
+
+          {/* <Traffic /> */}
+          {/* <MyClock />
+          <Lotto/>
           <BoxOffice/>
-          <Traffic/>
-        
+          
+          <MyRef/> */}
+          <Gallary/>
+
         </main>
       </div>
       <Footer />
