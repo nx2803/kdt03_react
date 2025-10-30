@@ -20,6 +20,7 @@ import Traffic from "./10/Traffic";
 import MyRef from "./11/MyRef";
 import RefCal from "./12/RefCal";
 import Gallary from "./13/Gallary";
+import FestGallary from "./13/FestGallary";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -36,7 +37,8 @@ function App() {
           <BoxOffice/>
           
           <MyRef/> */}
-          <Gallary/>
+          {/* <Gallary/> */}
+          <FestGallary/>
 
         </main>
       </div>
