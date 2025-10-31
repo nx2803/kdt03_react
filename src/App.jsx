@@ -20,16 +20,18 @@ import Traffic from "./10/Traffic";
 import MyRef from "./11/MyRef";
 import RefCal from "./12/RefCal";
 import Gallary from "./13/Gallary";
-import FestGallary from "./13/FestGallary";
+import FestGallary from "./14/FestGallary";
+import RouteHome from "./15/RouteHome";
+import RouteMain from "./15/RouteMain";
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
-    <div className='w-full  h-screen flex flex-col overflow-hidden bg-neutral-800 '>
+    <div className='w-full h-screen flex flex-col overflow-hidden bg-radial-[at_top_left] from-gray-800 to-neutral-900'>
       <Header />
-      <div className="w-full h-screen border-y-3  my-1 border-white flex justify-center items-center">
-        <main className="container  mx-auto flex-1 p-4 overflow-x-hidden text-center text-black overflow-y-auto ">
+      <div className="w-full h-screen border-b-2 my-1 border-white/20 flex justify-center items-center">
+        <main className="container  mx-auto flex-1 p-4 overflow-x-hidden text-center text-white overflow-y-auto ">
 
           {/* <Traffic /> */}
           {/* <MyClock />
@@ -38,8 +40,8 @@ function App() {
           
           <MyRef/> */}
           {/* <Gallary/> */}
-          <FestGallary/>
-
+          {/* <FestGallary/> */}
+            <RouteMain/>
         </main>
       </div>
       <Footer />
