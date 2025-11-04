@@ -15,7 +15,7 @@ export default function BoxOffice() {
 
     const getFetchData = (dateStr) => {
         const targetDt = dateStr.replace(/-/g, '');
-        const baseUrl = 'http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?';
+        const baseUrl = '/kobis/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?';
         let url = `${baseUrl}key=${apikey}&targetDt=${targetDt}`
         console.log(url);
 
@@ -95,7 +95,7 @@ export default function BoxOffice() {
             )}
 
             <h1 className=" text-white text-center flex flex-col items-center justify-between">
-                <span className='text-5xl font-bold'> 일일 박스오피스 순위 📽</span>
+                <span className='text-5xl font-bold flex flex-row text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-300'>일일 박스오피스 순위</span>
                 </h1>
                 <div className='flex flex-row mb-4 justify-between'>
                     <div/>
@@ -107,15 +107,15 @@ export default function BoxOffice() {
                             handleMouseLeave();
                         }}
                         max={getYesterdayDateStr()}
-                        className="p-2 border-3 border-red-700 rounded-lg text-center font-bold focus:ring-2 focus:ring-red-500 bg-white text-black mt-5"
+                        className="p-2 border-3 border-gray-800 rounded-lg text-center font-bold focus:ring-2 focus:ring-white bg-white text-black mt-5"
                     />
                 </div >
             
 
-            <div className="overflow-x-auto rounded-xl border-7 border-red-700">
-                <table className="min-w-full bg-white">
+            <div className="overflow-x-auto rounded-xl border-7 border-gray-700 ">
+                <table className="min-w-full bg-white ">
                     <thead>
-                        <tr className="bg-red-700  text-white uppercase text-xl leading-normal">
+                        <tr className="bg-linear-65 from-cyan-500 to-pink-400  text-white uppercase text-xl leading-normal">
                             <th className="py-3 px-3 text-center">순위</th>
                             <th className="py-3 px-6 text-center">영화명</th>
                             <th className="py-3 px-6 text-center">매출액</th>
@@ -140,7 +140,7 @@ export default function BoxOffice() {
                                         <span className="text-lg">{movie.rank}</span>
                                     </td>
 
-                                    <td className="py-3 px-6 text-center">
+                                    <td className="py-3 px-6 text-center font-bold">
                                         {movie.movieNm}
                                     </td>
 
@@ -179,7 +179,7 @@ export default function BoxOffice() {
                         }
                     </tbody>
                 </table>
-                <div className='bg-red-700 w-full h-8 text-center text-white p-2 flex items-center justify-center font-medium'>
+                <div className='bg-linear-65 from-cyan-500 to-pink-400 w-full h-8 text-center text-white p-2 flex items-center justify-center font-medium'>
                     {selectedMovie ? (
                         <span className='flex justify-center items-center text-sm sm:text-base'>
                             <strong className="mr-2" >

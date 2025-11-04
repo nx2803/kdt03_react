@@ -11,6 +11,22 @@ export default defineConfig({
         changeOrigin: true,
         secure: false,
         rewrite: path => path.replace(/^\/api/, ''),
+        configure: (proxy, options) => {
+          proxy.on('proxyReq', (proxyReq, req, res) =>{
+            proxyReq.setHeader('User-agent', 'PostmanRuntime/7.49.0');
+          });
+        }
+      },
+      '/kobis': {
+        target: 'http://kobis.or.kr/',
+        changeOrigin: true,
+        secure: false,
+        rewrite: path => path.replace(/^\/kobis/, ''),
+        configure: (proxy, options) => {
+          proxy.on('proxyReq', (proxyReq, req, res) =>{
+            proxyReq.setHeader('User-agent', 'PostmanRuntime/7.49.0');
+          });
+        }
       }
     }
   }

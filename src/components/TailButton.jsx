@@ -49,7 +49,12 @@ const BTStyle = {
         base: "bg-gray-700",
         hover: "bg-linear-65 from-cyan-500/80 to-pink-400/80",
         text: "text-white"
-    }
+    },
+    bps: {
+        base: "bg-linear-65 from-cyan-500/80 to-pink-400/80",
+        hover: "bg-linear-65 from-cyan-500/80 to-pink-400/80",
+        text: "text-white"
+    },
 }
 
 export default function TailButton({ color, caption, onClick }) {

@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import TailCard from '../components/TailCard'
 import TailInput from '../components/TailInput';
-import TailButton from '../components/tailButton';
+import TailButton from '../components/TailButton';
+import { DiVim } from 'react-icons/di';
 const apikey = import.meta.env.VITE_TRA_API;
 
 
@@ -62,13 +63,13 @@ export default function Gallary() {
     return (
         <div className='w-full h-200 flex flex-col items-center '>
 
-            <h1 className='text-white text-4xl font-bold mb-4'>한국관광공사 사진 정보 서비스</h1>
+            <h1 className=' text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-300 text-4xl font-bold mb-4'>한국관광공사 사진 정보 서비스</h1>
 
             <div className='flex flex-row'>
 
                 <TailInput type='text' name='keyword' ref={kwRef}></TailInput>
                 <div className='flex flex-row gap-4 ml-4 justify-center items-center'>
-                    <TailButton color="red" caption="검색" onClick={handleClick} />
+                    <TailButton color="bp" caption="검색" onClick={handleClick} />
                     <TailButton color="white" caption="취소" onClick={handleCancel} />
                 </div>
             </div>
@@ -81,8 +82,8 @@ export default function Gallary() {
                     ))
                 ) : (
 
-                    <div className='col-span-full justify-center items-center text-center text-4xl text-white'>
-                        결과없음
+                    <div>
+                
                     </div>
                 )}
 

@@ -1,10 +1,16 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&display=swap');
+@import "tailwindcss";
 
-body {
-    font-family: "Chiron GoRound TC", sans-serif;
-  font-optical-sizing: auto;
-  
+
+@tailwind/preflight;
+@tailwind utilities;
+
+/* 3. @layer base를 사용하여 body에 전역 폰트를 적용합니다. */
+@layer base {
+    body {
+        font-family: "Chiron GoRound TC", sans-serif;
+        font-optical-sizing: auto;
+    }
 }
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

@@ -21,7 +21,7 @@ export default function TailCard({ itemid, item }) {
 
             <div className='absolute bottom-0 left-0 right-0 p-5 z-10 text-white flex flex-col space-y-2'>
 
-                <h1 className='text-2xl font-extrabold line-clamp-2' title={title}>
+                <h1 className='text-2xl font-extrabold line-clamp-2  border-b-2 boredr-white pb-2' title={title}>
                     {title}
                 </h1>
 
