@@ -31,8 +31,8 @@ function App() {
   // const [count, setCount] = useState(0)
 
   return (
-    <BrowserRouter>
-      <div className='w-full h-screen flex flex-col overflow-hidden bg-radial-[at_top_left] from-gray-800 to-neutral-900'>
+    <BrowserRouter className="flex flex-col justify-between">
+      <div className='w-full h-screen  flex flex-col overflow-hidden bg-radial-[at_top_left] from-gray-800 to-neutral-900'>
         <Header />
         <div className="w-full h-screen border-b-2 my-1 border-white/20 flex justify-center items-center">
           <main className="container  mx-auto flex-1 p-4 overflow-x-hidden text-center text-white overflow-y-auto ">
