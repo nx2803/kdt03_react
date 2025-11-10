@@ -95,7 +95,7 @@ export default function BoxOffice() {
             )}
 
             <h1 className=" text-white text-center flex flex-col items-center justify-between">
-                <span className='text-5xl font-bold flex flex-row text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-300'>일일 박스오피스 순위</span>
+                <span className='text-5xl  flex flex-row text-white'>일일 박스오피스 순위</span>
                 </h1>
                 <div className='flex flex-row mb-4 justify-between'>
                     <div/>
@@ -107,15 +107,15 @@ export default function BoxOffice() {
                             handleMouseLeave();
                         }}
                         max={getYesterdayDateStr()}
-                        className="p-2 border-3 border-gray-800 rounded-lg text-center font-bold focus:ring-2 focus:ring-white bg-white text-black mt-5"
+                        className="p-2 border-3 border-neutral-700 rounded-lg text-center font-bold focus:ring-2 focus:ring-white bg-white text-black mt-5"
                     />
                 </div >
             
 
-            <div className="overflow-x-auto rounded-xl border-7 border-gray-700 ">
+            <div className="overflow-x-auto rounded border-7 border-neutral-600 ">
                 <table className="min-w-full bg-white ">
                     <thead>
-                        <tr className="bg-linear-65 from-cyan-500 to-pink-400  text-white uppercase text-xl leading-normal">
+                        <tr className="bg-neutral-600  text-white uppercase text-xl leading-normal">
                             <th className="py-3 px-3 text-center">순위</th>
                             <th className="py-3 px-6 text-center">영화명</th>
                             <th className="py-3 px-6 text-center">매출액</th>
@@ -162,8 +162,8 @@ export default function BoxOffice() {
 
                                     <td className="py-3 px-6 text-center font-bold">
                                         <div className='flex items-center justify-center'>
-                                            {parseInt(movie.rankInten) > 0 && <span className="text-green-600">▲</span>}
-                                            {parseInt(movie.rankInten) < 0 && <span className="text-red-600">▼</span>}
+                                            {parseInt(movie.rankInten) > 0 && <span className="text-cyan-400">▲</span>}
+                                            {parseInt(movie.rankInten) < 0 && <span className="text-pink-400">▼</span>}
                                             {parseInt(movie.rankInten) !== 0 ? (
                                                 <p className='ml-1 text-gray-700 font-normal'>{Math.abs(movie.rankInten)}</p>
                                             ) : movie.rankOldAndNew === 'NEW' ? (
@@ -179,7 +179,7 @@ export default function BoxOffice() {
                         }
                     </tbody>
                 </table>
-                <div className='bg-linear-65 from-cyan-500 to-pink-400 w-full h-8 text-center text-white p-2 flex items-center justify-center font-medium'>
+                <div className='bg-neutral-600 w-full h-8 text-center text-white p-2 flex items-center justify-center font-medium'>
                     {selectedMovie ? (
                         <span className='flex justify-center items-center text-sm sm:text-base'>
                             <strong className="mr-2" >

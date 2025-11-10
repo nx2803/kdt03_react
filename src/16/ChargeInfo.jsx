@@ -151,21 +151,21 @@ export default function ChargeInfo() {
             const stats = getStatistics(cdata);
             setStatistics(stats);
         } else {
-            
+
             setStatistics({
                 total: 0, stat1: 0, stat2: 0, stat3: 0, stat9: 0, etc: 0
             });
         }
     }, [cdata]);
     return (
-        <div className='w-full flex flex-col items-center overflow-auto'>
-            <h1 className='mb-20 text-5xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-300 font-bold '>전기차 충전소 정보</h1>
+        <div className='w-full flex flex-col items-center overflow-auto mt-5'>
+            <h1 className='mb-20 text-5xl '>전기차 충전소 정보</h1>
             <div className='flex flex-row justify-start items-center gap-5'>
                 <TailSelect id="sel1" title="시도" opk={Object.keys(zcode)} opv={Object.values(zcode)} handleChange={handleZcodeChange} ref={sel1Ref} value={selZcode} />
                 <TailSelect id="sel2" title="지역동" opk={Object.values(sCodeOptions)} opv={Object.keys(sCodeOptions)} handleChange={(e) => setSelZscode(e.target.value)} disabled={selZcode === ''} ref={sel2Ref} value={selZscode} />
                 <TailSelect id="sel3" title="충전소구분" opk={Object.keys(kind)} opv={Object.values(kind)} handleChange={handleKindChange} ref={sel3Ref} value={selKind} />
                 <TailSelect id="sel4" title="충전소상세" opk={Object.values(kDetailOptions)} opv={Object.keys(kDetailOptions)} handleChange={(e) => setSelKdetail(e.target.value)} disabled={selKind === ''} ref={sel4Ref} value={selKdetail} />
-                <TailButton color='bp' caption="검색" onClick={handleClick} />
+                <TailButton color='gray' caption="검색" onClick={handleClick} />
                 <TailButton color='white' caption="취소" onClick={handleCancel} />
             </div>
             <div>

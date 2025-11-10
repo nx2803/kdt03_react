@@ -26,15 +26,19 @@ import RouteHome from "./15/RouteHome";
 import RouteMain from "./15/RouteMain";
 import FestivalContents from "./14/FestivalContents";
 import ChargeInfo from "./16/ChargeInfo";
+import ChargeContents from "./16/ChargeContents";
+import JotaiCnt from "./17/JotaiCnt";
+import ToDoList from "./18/ToDoList";
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <BrowserRouter className="flex flex-col justify-between">
-      <div className='w-full h-screen  flex flex-col overflow-hidden bg-radial-[at_top_left] from-gray-800 to-neutral-900'>
+      <div className='w-full h-screen  flex flex-col overflow-hidden bg-radial-[at_top_left] from-neutral-800/95 from-50% to-black'>
         <Header />
-        <div className="w-full h-screen border-b-2 my-1 border-white/20 flex justify-center items-center">
+        
+        <div className="w-full h-screen  flex justify-center items-center">
           <main className="container  mx-auto flex-1 p-4 overflow-x-hidden text-center text-white overflow-y-auto ">
           
 
@@ -48,13 +52,19 @@ function App() {
                 <Route path='/Festival' element={<FestGallary />} />
                 <Route path='/Festival/contents' element={<FestivalContents />} />
                 <Route path='/Charge' element={<ChargeInfo />} />
+                <Route path='/Charge/contents' element={<ChargeContents />} />
+                <Route path='/Jotai' element={<JotaiCnt />} />
+                <Route path='/TodoList' element={<ToDoList />} />
               </Routes>
+              
             </div>
+            
 
 
 
           </main>
         </div>
+
         <Footer />
 
       </div>

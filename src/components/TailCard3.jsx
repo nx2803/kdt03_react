@@ -1,18 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const getBorderColorClass = (stat) => {
     switch (stat) {
-        case '2': 
-            return 'bg-linear-to-tl from-neutral-800 from 70% to-green-500/40 border-green-500'; 
-        case '3': 
-            return 'bg-linear-to-tl from-neutral-800 to-yellow-500/50 border-yellow-500'; 
-        case '4': 
-        case '5': 
+        case '2':
+            return 'bg-linear-to-tl from-neutral-800 from 70% to-green-500/40 border-green-500';
+        case '3':
+            return 'bg-linear-to-tl from-neutral-800 to-yellow-500/50 border-yellow-500';
+        case '4':
+        case '5':
             return 'bg-linear-to-tl from-neutral-800 to-red-500 border-red-500';
         case '9':
-            return 'bg-linear-to-tl from-neutral-800 to-cyan-500/50 border-cyan-500'; 
-        default: 
-            return 'bg-linear-to-tl from-neutral-800 to-neutral-500/50 border-neutral-300'; 
+            return 'bg-linear-to-tl from-neutral-800 to-cyan-500/50 border-cyan-500';
+        default:
+            return 'bg-linear-to-tl from-neutral-800 to-neutral-500/50 border-neutral-300';
     }
 };
 
@@ -32,7 +33,7 @@ const StatusBadge = ({ stat }) => {
 
     statusText = statusMap[stat] || '미확인';
 
-    if (stat === '2') colorClass = 'bg-green-600 text-white'; 
+    if (stat === '2') colorClass = 'bg-green-600 text-white';
     else if (stat === '3') colorClass = 'bg-yellow-600 text-white';
     else if (stat === '4' || stat === '5') colorClass = 'bg-red-600 text-white';
     else if (stat === '9') colorClass = 'bg-cyan-600 text-white';
@@ -48,7 +49,7 @@ const StatusBadge = ({ stat }) => {
 
 export default function TailCard3({ data }) {
     if (!data || data.length === 0) {
-        return null; 
+        return null;
     }
 
     return (
@@ -57,48 +58,51 @@ export default function TailCard3({ data }) {
                 const bgColorClass = getBorderColorClass(item.stat);
 
                 return (
-                    <div
-                        key={`${item.statId}-${item.chgerId}-${index}`}
-                    
-                        className={` rounded p-6 border-3 ${bgColorClass} transition duration-300 transform hover:scale-[1.02] relative overflow-hidden shadow-2xl shadow-black/50`}
-                    >
-                        
-                     
-                        <div className="flex justify-center items-center mb-5 pb-3 border-b-2 border-white"> 
-                        
-                            <h3 className="text-2xl font-bold text-white mr-2 line-clamp-1">{item.statNm}</h3>
-                        </div>
-                        
-                       
-                        <div className='pb-10'>
-                            <p className="text-sm text-white mb-2 flex items-start"> 
-                                <span className="font-semibold w-24 text-white shrink-0">주소</span>
-                                <span className='ml-2 text-pretty'>{item.addr}</span>
-                            </p>
+                    <Link to="/Charge/contents" state={{contents:item}} key={`${item.statId}-${item.chgerId}-${index}`}>
+                        <div
+                            
 
-                            <p className="text-sm text-white mb-2 flex items-start">
-                                <span className="font-semibold w-24 text-white shrink-0">운영기관</span>
-                                <span className='ml-2 text-pretty '>{item.busiNm} ({item.busiCall})</span>
-                            </p>
+                            className={` rounded p-6 border-3 ${bgColorClass} transition duration-300 transform hover:scale-[1.02] relative overflow-hidden shadow-2xl shadow-black/50`}
+                        >
 
-                            <p className="text-sm text-white mb-2 flex items-start">
-                                <span className="font-semibold w-24 text-white shrink-0">충전기 정보</span>
-                                <span className='ml-2 text-pretty'>타입: {item.chgerType} / 출력: {item.output}kW</span>
-                            </p>
 
-                            <p className="text-sm text-white mb-3 flex items-start">
-                                <span className="font-semibold w-24 text-white shrink-0">이용시간</span>
-                                <span className='ml-2 text-wrap'>{item.useTime}</span>
-                            </p>
+                            <div className="flex justify-center items-center mb-5 pb-3 border-b-2 border-white">
+
+                                <h3 className="text-2xl font-bold text-white mr-2 line-clamp-1">{item.statNm}</h3>
+                            </div>
+
+
+                            <div className='pb-10'>
+                                <p className="text-sm text-white mb-2 flex items-start">
+                                    <span className="font-semibold w-24 text-white shrink-0">주소</span>
+                                    <span className='ml-2 text-pretty'>{item.addr}</span>
+                                </p>
+
+                                <p className="text-sm text-white mb-2 flex items-start">
+                                    <span className="font-semibold w-24 text-white shrink-0">운영기관</span>
+                                    <span className='ml-2 text-pretty '>{item.busiNm} ({item.busiCall})</span>
+                                </p>
+
+                                <p className="text-sm text-white mb-2 flex items-start">
+                                    <span className="font-semibold w-24 text-white shrink-0">충전기 정보</span>
+                                    <span className='ml-2 text-pretty'>타입: {item.chgerType} / 출력: {item.output}kW</span>
+                                </p>
+
+                                <p className="text-sm text-white mb-3 flex items-start">
+                                    <span className="font-semibold w-24 text-white shrink-0">이용시간</span>
+                                    <span className='ml-2 text-wrap'>{item.useTime}</span>
+                                </p>
+                            </div>
+
+
+                            <div className='absolute bottom-4 inset-x-0 w-max mx-auto'>
+                                <StatusBadge stat={item.stat} />
+                            </div>
                         </div>
-                        
-                    
-                        <div className='absolute bottom-4 inset-x-0 w-max mx-auto'>
-                            <StatusBadge stat={item.stat} />
-                        </div>
-                    </div>
+                    </Link>
                 );
             })}
         </div>
+
     );
 }

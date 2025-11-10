@@ -62,6 +62,8 @@ export default function FestGallary() {
                     .sort();
 
                 setGdata(['전체', ...guguns]);
+                
+                
                 const initialFilterValue = sessionStorage.getItem(SESSION_KEY) || '전체';
                 
                 if (initialFilterValue !== '전체') {
@@ -92,12 +94,12 @@ export default function FestGallary() {
     return (
         <div className='w-full h-200 flex flex-col items-center scroll-smooth '>
 
-            <h1 className='text-5xl mb-8 mt-4  '>부산 축제 정보 </h1>
+            <h1 className='text-5xl mb-8 mt-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-300 '>부산 축제 정보 </h1>
 
             <div className='flex flex-row mb-12'>
 
                 <select
-                    className='bg-neutral-700 shadow-2xl p-2 rounded text-white w-50 text-center '
+                    className='bg-neutral-800 p-2 rounded text-white w-50 text-center '
                     value={selectedGugun}
                     onChange={handleChange}>
                     {gdata.map(gugun => (

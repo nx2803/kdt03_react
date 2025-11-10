@@ -21,8 +21,8 @@ const BTStyle = {
         text: "text-black"
     },
     gray: {
-        base: "bg-neutral-500",
-        hover: "bg-neutral-500",
+        base: "bg-neutral-700",
+        hover: "bg-neutral-800",
         text: "text-white"
     },
     cyan: {
@@ -55,13 +55,19 @@ const BTStyle = {
         hover: "bg-linear-65 from-cyan-500/80 to-pink-400/80",
         text: "text-white"
     },
+    bg: {
+        base: "bg-gray-700",
+        hover: "bg-gray-800",
+        text: "text-white"
+    }
+
 }
 
-export default function TailButton({ color, caption, onClick }) {
+export default function TailButton({ color, caption, onClick, className }) {
     const btstyle = BTStyle[color];
     return (
         <div>
-            <button className={`${btstyle.base} rounded ${btstyle.text} hover:${btstyle.hover} px-5 py-3 cursor-pointer hover:scale-115 transition-all  duration-100 ease-in-out `} onClick={onClick}>{caption}</button>
+            <button className={`${btstyle.base} rounded ${btstyle.text} hover:${btstyle.hover} px-5 py-3 cursor-pointer hover:scale-115 transition-all  duration-100 ease-in-out ${className}`} onClick={onClick}>{caption}</button>
         </div>
     )
 }

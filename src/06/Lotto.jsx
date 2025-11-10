@@ -29,12 +29,12 @@ export default function Lotto() {
 
 
   return (
-    <div className='w-full h-full flex flex-col justify-center items-center overflow-hidden'>
+    <div className='w-full h-full flex flex-col justify-center items-center overflow-hidden pb-5'>
       <div className='flex flex-row justify-center items-center overflow-hidden text-white py-10'>
         <TailBall n={num[0]} /><TailBall n={num[1]} /><TailBall n={num[2]} /><TailBall n={num[3]} /><TailBall n={num[4]} /><TailBall n={num[5]} /><FaPlus className='text-4xl' /><TailBall n={num[6]} />
 
       </div>
-      <TailButton caption="로또번호생성" color="bp" onClick={handleNum} />
+      <TailButton caption="로또번호생성" color="gray" onClick={handleNum} className="mb-5"/>
     </div>
   )
 }

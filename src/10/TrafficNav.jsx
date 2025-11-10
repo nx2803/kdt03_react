@@ -19,7 +19,7 @@ export default function TrafficNav({ title, category, selectC, setSelC }) {
       </div>
       <div className='flex flex-row gap-4 '>
         
-          {category && category.map(item => <TailButton key={item} color={item === selectC ? 'bps' : 'white'} caption={item} onClick={()=>handleButtonClick(item)} />)}
+          {category && category.map(item => <TailButton key={item} color={item === selectC ? 'gray' : 'white'} caption={item} onClick={()=>handleButtonClick(item)} />)}
           
         
       </div>
