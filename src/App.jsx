@@ -28,14 +28,14 @@ import FestivalContents from "./14/FestivalContents";
 import ChargeInfo from "./16/ChargeInfo";
 import ChargeContents from "./16/ChargeContents";
 import JotaiCnt from "./17/JotaiCnt";
-import ToDoList from "./18/ToDoList";
+import ToDoList from "./18_1/ToDoList";
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <BrowserRouter className="flex flex-col justify-between">
-      <div className='w-full h-screen  flex flex-col overflow-hidden bg-radial-[at_top_left] from-neutral-800/95 from-50% to-black'>
+      <div className='w-full h-screen  flex flex-col overflow-hidden bg-radial-[at_top_left] from-zinc-800/95 from-50% to-zinc-950'>
         <Header />
         
         <div className="w-full h-screen  flex justify-center items-center">
