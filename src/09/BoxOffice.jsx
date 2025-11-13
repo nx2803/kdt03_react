@@ -107,15 +107,15 @@ export default function BoxOffice() {
                             handleMouseLeave();
                         }}
                         max={getYesterdayDateStr()}
-                        className="p-2 border-3 border-neutral-700 rounded-lg text-center font-bold focus:ring-2 focus:ring-white bg-white text-black mt-5"
+                        className="p-2  rounded-lg text-center font-bold focus:ring-2 focus:ring-white bg-white text-black mt-5"
                     />
                 </div >
             
 
-            <div className="overflow-x-auto rounded border-7 border-neutral-600 ">
+            <div className="overflow-x-auto rounded border-7 border-zinc-700 ">
                 <table className="min-w-full bg-white ">
                     <thead>
-                        <tr className="bg-neutral-600  text-white uppercase text-xl leading-normal">
+                        <tr className="bg-zinc-700  text-white uppercase text-xl leading-normal">
                             <th className="py-3 px-3 text-center">순위</th>
                             <th className="py-3 px-6 text-center">영화명</th>
                             <th className="py-3 px-6 text-center">매출액</th>
@@ -179,7 +179,7 @@ export default function BoxOffice() {
                         }
                     </tbody>
                 </table>
-                <div className='bg-neutral-600 w-full h-8 text-center text-white p-2 flex items-center justify-center font-medium'>
+                <div className='bg-zinc-700 w-full h-8 text-center text-white p-2 flex items-center justify-center font-medium'>
                     {selectedMovie ? (
                         <span className='flex justify-center items-center text-sm sm:text-base'>
                             <strong className="mr-2" >

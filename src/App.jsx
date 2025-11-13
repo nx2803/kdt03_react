@@ -29,13 +29,13 @@ import ChargeInfo from "./16/ChargeInfo";
 import ChargeContents from "./16/ChargeContents";
 import JotaiCnt from "./17/JotaiCnt";
 import ToDoList from "./18_1/ToDoList";
-
+import Subway from "./19/Subway";
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <BrowserRouter className="flex flex-col justify-between">
-      <div className='w-full h-screen  flex flex-col overflow-hidden bg-radial-[at_top_left] from-zinc-800/95 from-50% to-zinc-950'>
+      <div className='w-full h-screen  flex flex-col overflow-hidden bg-radial-[at_top_left] from-neutral-800 from-35% to-zinc-950'>
         <Header />
         
         <div className="w-full h-screen  flex justify-center items-center">
@@ -55,6 +55,7 @@ function App() {
                 <Route path='/Charge/contents' element={<ChargeContents />} />
                 <Route path='/Jotai' element={<JotaiCnt />} />
                 <Route path='/TodoList' element={<ToDoList />} />
+                <Route path='/Subway' element={<Subway />} />
               </Routes>
               
             </div>

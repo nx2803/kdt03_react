@@ -69,7 +69,7 @@ export default function Gallary() {
 
                 <TailInput type='text' name='keyword' ref={kwRef}></TailInput>
                 <div className='flex flex-row gap-4 ml-4 justify-center items-center'>
-                    <TailButton color="bp" caption="검색" onClick={handleClick} />
+                    <TailButton color="gray" caption="검색" onClick={handleClick} />
                     <TailButton color="white" caption="취소" onClick={handleCancel} />
                 </div>
             </div>
