@@ -5,7 +5,7 @@ import sarea from './sarea.json'
 import TailSelect from '../components/TailSelect'
 export default function subway() {
   const apikey = import.meta.env.VITE_TRA_API;
-  const baseurl = 'https://apis.data.go.kr/6260000/IndoorAirQuality/getIndoorAirQualityByStation?serviceKey='
+  const baseurl = '/dataApi/6260000/IndoorAirQuality/getIndoorAirQualityByStation?serviceKey='
 
   const [tdata, setTdata] = useState([]);
   const selAreaRef = useRef();

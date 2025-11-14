@@ -14,7 +14,7 @@ export default function FestGallary() {
     const [tdata, setTdata] = useState([]);
     const [gdata, setGdata] = useState(['전체']);
 
-    const baseurl = 'https://apis.data.go.kr/6260000/FestivalService/getFestivalKr';
+    const baseurl = '/dataApi/6260000/FestivalService/getFestivalKr';
 
     const handleFilter = (gugun) => {
         const selectedValue = gugun;

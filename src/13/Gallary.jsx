@@ -12,7 +12,7 @@ export default function Gallary() {
 
     const kwRef = useRef();
     const [tdata, setTdata] = useState([]);
-    const baseurl = 'https://apis.data.go.kr/B551011/PhotoGalleryService1/gallerySearchList1';
+    const baseurl = '/dataApi/B551011/PhotoGalleryService1/gallerySearchList1';
     let keyword = kwRef.current?.value;
     const getFetchData = async() => {
         let url = `${baseurl}?serviceKey=${apikey}&numOfRows=100&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=A&keyword=${encodeURIComponent(keyword)}&_type=json`

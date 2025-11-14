@@ -24,7 +24,7 @@ export default function ChargeInfo() {
     });
 
     const apikey = import.meta.env.VITE_TRA_API;
-    const baseurl = "https://apis.data.go.kr/B552584/EvCharger/getChargerInfo?serviceKey="
+    const baseurl = "/dataApi/B552584/EvCharger/getChargerInfo?serviceKey="
 
     const sel1Ref = useRef();
     const sel2Ref = useRef();
