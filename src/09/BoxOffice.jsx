@@ -39,7 +39,7 @@ export default function BoxOffice() {
     const fetchPoster = async (movieName) => {
         if (!movieName) return null;
 
-        const searchUrl = `https:/https://apis.data.go.kr.themoviedb.org/3/search/movie?api_key=${apikey2}&query=${encodeURIComponent(movieName)}&language=ko-KR`;
+        const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apikey2}&query=${encodeURIComponent(movieName)}&language=ko-KR`;
 
         try {
             const response = await fetch(searchUrl);
