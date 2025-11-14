@@ -159,7 +159,7 @@ export default function ChargeInfo() {
     }, [cdata]);
     return (
         <div className='w-full flex flex-col items-center overflow-auto mt-5'>
-            <h1 className='mb-20 text-5xl '>전기차 충전소 정보</h1>
+            <h1 className='mb-20 text-5xl font-semibold '>전기차 충전소 정보</h1>
             <div className='flex flex-row justify-start items-center gap-5'>
                 <TailSelect id="sel1" title="시도" opk={Object.keys(zcode)} opv={Object.values(zcode)} handleChange={handleZcodeChange} ref={sel1Ref} value={selZcode} className='w-50'/>
                 <TailSelect id="sel2" title="지역동" opk={Object.values(sCodeOptions)} opv={Object.keys(sCodeOptions)} handleChange={(e) => setSelZscode(e.target.value)} disabled={selZcode === ''} ref={sel2Ref} value={selZscode}  className='w-50'/>

@@ -95,7 +95,7 @@ export default function BoxOffice() {
             )}
 
             <h1 className=" text-white text-center flex flex-col items-center justify-between">
-                <span className='text-5xl  flex flex-row text-white'>일일 박스오피스 순위</span>
+                <span className='text-5xl font-semibold flex flex-row text-white'>일일 박스오피스 순위</span>
                 </h1>
                 <div className='flex flex-row mb-4 justify-between'>
                     <div/>

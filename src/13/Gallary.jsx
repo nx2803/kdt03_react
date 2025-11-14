@@ -63,7 +63,7 @@ export default function Gallary() {
     return (
         <div className='w-full h-200 flex flex-col items-center '>
 
-            <h1 className='  text-4xl mb-4'>한국관광공사 사진 정보 서비스</h1>
+            <h1 className='  text-4xl font-semibold mb-4'>한국관광공사 사진 정보 서비스</h1>
 
             <div className='flex flex-row'>
 

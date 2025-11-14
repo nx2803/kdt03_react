@@ -1,11 +1,11 @@
 import React from 'react'
 
 const BallColor = [
-  "border-yellow-400",
-  "border-blue-400",
+  "border-amber-400",
+  "border-cyan-400",
   "border-red-400",
-  "border-gray-400",
-  "border-green-400"
+  "border-zinc-300",
+  "border-lime-400"
 ]
 export default function TailBall({n}) {
   
