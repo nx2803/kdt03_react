@@ -9,7 +9,7 @@ export default function Traffic() {
     const getFetchData = () => {
             
         // setTdata(trafficData);
-        const baseurl = "https:/https://apis.data.go.kr.odcloud.kr/dataApi/15070282/v1/uddi:8449c5d7-8be5-4712-9093-968fc0b2d9fc?page=1&perPage=117&returnType=json&serviceKey="
+        const baseurl = "https://api.odcloud.kr/api/15070282/v1/uddi:8449c5d7-8be5-4712-9093-968fc0b2d9fc?page=1&perPage=117&returnType=json&serviceKey="
         let url = `${baseurl}${apikey}`;
 
         fetch(url)

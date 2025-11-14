@@ -15,7 +15,7 @@ export default function BoxOffice() {
 
     const getFetchData = (dateStr) => {
         const targetDt = dateStr.replace(/-/g, '');
-        const baseUrl = '/kobis/openapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?';
+        const baseUrl = '/kobis/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?';
         let url = `${baseUrl}key=${apikey}&targetDt=${targetDt}`
         console.log(url);
 
