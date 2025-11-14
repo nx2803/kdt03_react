@@ -15,7 +15,7 @@ export default function BoxOffice() {
 
     const getFetchData = (dateStr) => {
         const targetDt = dateStr.replace(/-/g, '');
-        const baseUrl = '/kobis/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?';
+        const baseUrl = 'http://kobis.or.krhttp://kobis.or.kropenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?';
         let url = `${baseUrl}key=${apikey}&targetDt=${targetDt}`
         console.log(url);
 
@@ -39,7 +39,7 @@ export default function BoxOffice() {
     const fetchPoster = async (movieName) => {
         if (!movieName) return null;
 
-        const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apikey2}&query=${encodeURIComponent(movieName)}&language=ko-KR`;
+        const searchUrl = `https:/https://apis.data.go.kr.themoviedb.org/3/search/movie?api_key=${apikey2}&query=${encodeURIComponent(movieName)}&language=ko-KR`;
 
         try {
             const response = await fetch(searchUrl);
