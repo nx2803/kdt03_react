@@ -6,11 +6,11 @@ export default defineConfig({
   plugins: [react(), tailwind(),],
   server: {
     proxy: {
-      '/api': {
+      '/dataApi': {
         target: 'https://apis.data.go.kr',
         changeOrigin: true,
         secure: false,
-        rewrite: path => path.replace(/^\/api/, ''),
+        rewrite: path => path.replace(/^\/dataApi/, ''),
         configure: (proxy, options) => {
           proxy.on('proxyReq', (proxyReq, req, res) =>{
             proxyReq.setHeader('User-agent', 'PostmanRuntime/7.49.0');
@@ -18,7 +18,7 @@ export default defineConfig({
         }
       },
       '/kobis': {
-        target: 'http://kobis.or.kr/',
+        target: 'http://kobis.or.kr/kobisopenapi/',
         changeOrigin: true,
         secure: false,
         rewrite: path => path.replace(/^\/kobis/, ''),

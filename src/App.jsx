@@ -35,7 +35,7 @@ function App() {
 
   return (
     <BrowserRouter className="flex flex-col justify-between">
-      <div className='w-full h-screen  flex flex-col overflow-hidden bg-radial-[at_top_left] from-neutral-800/97 from-30% to-zinc-950'>
+      <div className='w-full h-screen  flex flex-col overflow-hidden bg-zinc-900'>
         <Header />
         
         <div className="w-full h-screen  flex justify-center items-center">
