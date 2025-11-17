@@ -5,11 +5,11 @@ import map from '../assets/map.png'
 export default function FestivalContents() {
     const navigate = useNavigate();
     const handleClose = () => {
-        navigate(-1); 
+        navigate(-1);
     };
     const location = useLocation();
     const contents = location.state?.contents || {};
-    const OverlayClasses = 'absolute inset-0 bg-black/20';
+    const OverlayClasses = 'absolute inset-0 bg-black/40';
     let title = (contents.MAIN_TITLE || '제목 없음').replace(/\s*\(\s*한\s*,\s*영\s*,\s*중간\s*,\s*중번\s*,\s*일\s*\)/, '');
     const kakaoMapUrl =
         `https://map.kakao.com/link/map/${contents?.MAIN_PLACE.replace(',', '').replace('', '')},${contents?.LAT},${contents?.LNG}`;
@@ -28,8 +28,8 @@ export default function FestivalContents() {
 
 
             <div className={OverlayClasses}></div>
-            <button 
-                onClick={handleClose} 
+            <button
+                onClick={handleClose}
                 className='absolute top-4 right-4 z-50 text-3xl text-white bg-black/50 hover:bg-black/70 rounded-full w-13 h-13 flex items-center justify-center transition duration-200'
             >
                 ✖

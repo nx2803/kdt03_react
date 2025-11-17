@@ -6,6 +6,7 @@
 @tailwind utilities;
 
 
+
 /* 3. @layer base를 사용하여 body에 전역 폰트를 적용합니다. */
 @layer base {
     body {

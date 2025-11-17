@@ -45,7 +45,7 @@ export default function ToDoList() {
     }, [todos]);
 
     return (
-        <div className='flex flex-col w-250 justify-center items-center'>
+        <div className='flex flex-col w-full items-center h-220 '>
             <div className="mt-10 text-5xl font-semibold text-center flex flex-row ">
                 할일 목록(<RiSupabaseFill className='mr-3 text-[#3ecf8e]' />    {' Client 라이브러리 함수'})
             </div>
@@ -53,11 +53,13 @@ export default function ToDoList() {
 
                 전체 : {todos.length} 개 | 완료 : {comp} 개 | 미완료 : {todos.length - comp} 개
             </div>
-            <ToDoInput getTodos={getTodos} />
 
-            {
-                todos.map(todo => <ToDoItem key={todo.id} todo={todo} setTodos={setTodos} getTodos={getTodos} />)
-            }
+            <ToDoInput getTodos={getTodos} />
+            <div className='overflow-auto'>
+                {
+                    todos.map(todo => <ToDoItem key={todo.id} todo={todo} setTodos={setTodos} getTodos={getTodos} />)
+                }
+            </div>
         </div>
     )
 }

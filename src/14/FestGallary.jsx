@@ -90,7 +90,7 @@ export default function FestGallary() {
     }, []);
 
     return (
-        <div className='w-full h-200 flex flex-col items-center scroll-smooth '>
+        <div className='w-full h-220 flex flex-col items-center scroll-smooth '>
 
             <h1 className='text-5xl mb-8 mt-4 font-semibold '>부산 축제 정보 </h1>
 
