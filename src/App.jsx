@@ -30,6 +30,7 @@ import ChargeContents from "./16/ChargeContents";
 import JotaiCnt from "./17/JotaiCnt";
 import ToDoList from "./18_3/ToDoList";
 import Subway from "./19/Subway";
+import Login from "./Login";
 function App() {
   // const [count, setCount] = useState(0)
 
@@ -44,7 +45,8 @@ function App() {
 
             <div className='w-full flex flex-col justify-center items-center'>
               <Routes>
-                <Route path='/' element={<MyClock />} />
+                <Route path='/' element={<Login />} />
+                <Route path='/Clock' element={<MyClock />} />
                 <Route path='/Lotto' element={<Lotto />} />
                 <Route path='/BoxOffice' element={<BoxOffice />} />
                 <Route path='/Traffic' element={<Traffic />} />
