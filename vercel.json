@@ -7,6 +7,10 @@
         {
             "source": "/kobis/:path*",
             "destination": "https://kobis.or.kr/kobisopenapi/:path*"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
         }
     ]
 }
