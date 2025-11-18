@@ -5,6 +5,8 @@ import tailwind from '@tailwindcss/vite';
 export default defineConfig({
   plugins: [react(), tailwind(),],
   server: {
+    
+
     proxy: {
       '/dataApi': {
         target: 'https://apis.data.go.kr',
@@ -12,7 +14,7 @@ export default defineConfig({
         secure: false,
         rewrite: path => path.replace(/^\/dataApi/, ''),
         configure: (proxy, options) => {
-          proxy.on('proxyReq', (proxyReq, req, res) =>{
+          proxy.on('proxyReq', (proxyReq, req, res) => {
             proxyReq.setHeader('User-agent', 'PostmanRuntime/7.49.0');
           });
         }
@@ -23,7 +25,7 @@ export default defineConfig({
         secure: false,
         rewrite: path => path.replace(/^\/kobis/, ''),
         configure: (proxy, options) => {
-          proxy.on('proxyReq', (proxyReq, req, res) =>{
+          proxy.on('proxyReq', (proxyReq, req, res) => {
             proxyReq.setHeader('User-agent', 'PostmanRuntime/7.49.0');
           });
         }

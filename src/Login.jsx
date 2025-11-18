@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { supabase } from './supabase/client';
 import { useAtom } from 'jotai';
 import { sessionAtom } from './AtomAuth';
+import { FaGithub } from "react-icons/fa";
 function Login() {
   // session 상태를 저장하는 state
   const [session, setSession] = useAtom(sessionAtom);
@@ -53,9 +54,9 @@ function Login() {
         <h1 className="text-2xl font-bold mb-4">로그인</h1>
         <button
           onClick={signInWithGithub} // 버튼 클릭 시 GitHub으로 로그인 함수 호출
-          className="px-4 py-2 bg-zinc-600 text-white rounded hover:bg-zinc-500"
+          className="px-4 py-2 bg-zinc-600 text-white rounded flex flex-row items-center hover:bg-zinc-500"
         >
-          GitHub으로 로그인
+          <FaGithub className='text-2xl'/> 
         </button>
       </div>
     );
